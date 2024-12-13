@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>Sign Up</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- my styles -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container text-center py-5">
+        <div class="w-75 mx-auto p-5">
+          <h1 class="mb-4">Smart Login System</h1>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="signUpName"
+              placeholder="Enter your name"
+              oninput="validate(this)"
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="signUpEmail"
+              placeholder="Enter your email"
+              oninput="validate(this)"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="password"
+              class="form-control"
+              id="signUpPass"
+              placeholder="Enter your password"
+              oninput="validate(this)"
+            />
+          </div>
+          <p class="text-danger d-none">
+            all inputs required to follow the rules
+          </p>
+          <p class="text-success d-none">Success</p>
+          <a href="#" class="my-btn d-block mb-3" onclick="validateAddUser()"
+            >Sign Up</a
+          >
+          <p class="text-white">
+            you have an account?
+            <a
+              onclick="clearFormInputs()"
+              href="../index.html"
+              class="link-light link-underline-opacity-0 link-underline-opacity-100-hover"
+              >Sign In</a
+            >
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <i class="fa-solid fa-circle text-danger"></i>
+              <i class="fa-solid fa-circle text-warning"></i>
+              <i class="fa-solid fa-circle text-success"></i>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="fs-4 fw-bold">Please follow the rules below :</p>
+            <ul class="list-unstyled">
+              <li>
+                <p class="fs-5">
+                  <i class="fa-regular fa-circle-right text-danger p-2"></i>
+                  name must contain at least 3 characters
+                </p>
+              </li>
+              <li>
+                <p class="fs-5">
+                  <i class="fa-regular fa-circle-right text-danger p-2"></i>
+                  email must be a valid one
+                  <span class="d-inline-block px-1 py-3 bg-warning"
+                    >and not used before</span
+                  >
+                </p>
+              </li>
+              <li>
+                <p class="fs-5">
+                  <i class="fa-regular fa-circle-right text-danger p-2"></i>
+                  password:
+                </p>
+                <ul class="ps-5 list-unstyled">
+                  <li>Minimum 8 characters.</li>
+                  <li>At least one uppercase letter.</li>
+                  <li>At least one lowercase letter.</li>
+                  <li>At least one digit.</li>
+                  <li>At least one special character (e.g., !@#$%^&*()).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bootstrap js -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- my js -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>
