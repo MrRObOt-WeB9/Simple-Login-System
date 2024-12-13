@@ -85,6 +85,9 @@ function validate(obj) {
 function validateSignIn() {
   if (localStorage.getItem("users") != null) {
     users = JSON.parse(localStorage.getItem("users"));
+  } else {
+    document.querySelector("p.incorrect").classList.remove("d-none");
+    return;
   }
   for (var i = 0; i < users.length; i++) {
     if (
