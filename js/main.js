@@ -125,7 +125,7 @@ function displayHomePage(index) {
               <a
                 class="btn btn-outline-warning"
                 aria-current="page"
-                href="../index.html"
+                href="index.html"
                 >LogOut</a
               >
             </li>
